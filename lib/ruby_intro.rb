@@ -47,7 +47,9 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
+  # can have one or more 0's and 1's
   if(s =~ /^[0-1]+$/)
+    # convert string to integer with base 2
     return s.to_i(2) % 4 == 0
   else
     return false
@@ -75,6 +77,4 @@ class BookInStock
   def price_as_string
     "$%0.2f" % @price
   end
-
-
 end
